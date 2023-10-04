@@ -7,7 +7,7 @@
 </head>
 <body>
   <form method = "POST" action="zad1_2.php">
-    <input type="number" name="liczba">
+    <input type="number" name="liczba" value="0">
     <input type="submit" value="WYŚLIJ">
   </form>
 </body>
