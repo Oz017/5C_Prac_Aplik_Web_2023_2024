@@ -18,7 +18,7 @@
             continue;
         }
      }
-     echo "Suma wszystkich liczb z przedziału od $x do $y to: $suma";
+     echo "Suma wszystkich liczb nieparzystych z przedziału od $x do $y to: $suma";
     ?>
 </body>
 </html>
