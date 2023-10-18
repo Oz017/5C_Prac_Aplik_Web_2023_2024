@@ -7,6 +7,8 @@
 </head>
 <body>
     <form action="zad1_2.php" method="post">
+        <label for="id1">Podaj ID (opcjonalne)</label>
+        <input type="number" name="id" id="id1"><br>
         <label for="imie">Podaj imię</label>
         <input type="text" name="firstName" id="imie"></br>
         <label for="nazwisko">Podaj nazwisko:</label>

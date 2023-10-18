@@ -12,6 +12,7 @@
         $db = "prognoza";
         $pass = "";
 
+        $id = $_POST['id'];
         $birthyear = $_POST["year"];
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
@@ -19,7 +20,7 @@
 
         $connection = mysqli_connect($host, $user, $pass, $db);
 
-        $query = "INSERT INTO `matematycy`( `imie`, `nazwisko`, `rok_urodzenia`, `liczba_publikacji`) VALUES ( '$firstName', '$lastName', '$birthyear' , '$num' );";
+        $query = "INSERT INTO `matematycy`( `id`, `imie`, `nazwisko`, `rok_urodzenia`, `liczba_publikacji`) VALUES ( '$id', '$firstName', '$lastName', '$birthyear' , '$num' );";
 
         $result = mysqli_query($connection,$query);
 
