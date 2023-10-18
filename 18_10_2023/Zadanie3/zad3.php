@@ -8,7 +8,7 @@
 <body>
     <form action="zad3_2.php" method="post">
         <label for="id1">Podaj ID</label>
-        <input type="text" name="id" id="id1">
+        <input type="number" name="id" id="id1">
         <input type="submit" value="Wyślij">
     </form>
 </body>
