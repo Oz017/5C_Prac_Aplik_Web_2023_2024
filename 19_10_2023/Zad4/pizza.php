@@ -8,10 +8,9 @@
 <body>
     <?php
         $distance = $_POST['km'];
-        $isWarm = $_POST['hot'];
         $cost = $distance * 0.5;
 
-        if($isWarm == true){
+        if(isset($_POST['hot'])){
             $cost *= 1.15;
             echo "Koszt pizzy to: $cost";
         }else{
