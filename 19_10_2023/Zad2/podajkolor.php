@@ -6,7 +6,7 @@
     <title>Podaj Kolor</title>
 </head>
 <body>
-    <form action="kolor.php" method="post">
+    <form action="kolory.php" method="post">
         <label for="bgcolor">Podaj kolor tła (,np FFFFFF):</label>
         <input type="text" name="bgcolor" id="bgcolor"  ><br>
         <label for="txtcolor">Podaj kolor tekstu (,np FFFFFF):</label>
