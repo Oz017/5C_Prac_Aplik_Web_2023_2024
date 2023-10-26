@@ -38,7 +38,7 @@
         </section>
         <section id="midFooter">
             <?php
-            
+                echo '<p> OK</p>';
             ?>
         </section>
         <section id="rightFooter">
