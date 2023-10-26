@@ -1,7 +1,6 @@
 <?php
     $day = $_POST['day'];
     $month = $_POST['month'];
-    $year = $_POST['year'];
 
     $birthDate = $day . "." . $month;
     $cookie_name = 'Birthday';
