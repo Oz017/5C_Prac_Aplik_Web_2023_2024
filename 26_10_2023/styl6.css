@@ -16,7 +16,7 @@ main{
     clear: both;
     background-color: rgb(128, 00, 00);
     padding: 50px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 #leftFooter, #rightFooter{
