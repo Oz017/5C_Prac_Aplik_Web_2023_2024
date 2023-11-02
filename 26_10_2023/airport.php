@@ -56,7 +56,6 @@
                 mysqli_close($connect);
             ?>
         </table>
-
     </main>
     <footer>
         <section id="leftFooter">
