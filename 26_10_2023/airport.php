@@ -1,9 +1,8 @@
 <?php
     $cookiename = "IsVisited";
     $cookievalue = "Dzień Dobry!";
-    if(!isset($_COOKIE[$cookiename])){
     setcookie($cookiename,$cookievalue,time()+3600);
-    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pl">
