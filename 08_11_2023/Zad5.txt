@@ -1,0 +1,3 @@
+W przypadku menu wyboru programu wygodniej jest użyć instrukcji switch ponieważ w menu wyboru mamy na sztywno ustawione wartości zmiennych dlatego 
+oszczędza nam ona czas pisania kodu oraz sama objętość kodu się zmniejsza. Obie wersje kodu będą spełniać takie same cele lecz instrukcja switch 
+jest bardziej czytelna niż seria instrukcji if().
