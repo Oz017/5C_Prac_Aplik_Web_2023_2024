@@ -1,0 +1,4 @@
+Pętle umożliwiają wykonanie tej samej instrukcji wielokrotną ilość razy
+bez konieczności ponownego pisania tego samego kodu dzięki czemu skracają
+czas jaki musimy spędzić na pisaniu kodu oraz jego objętość. Dzięki temu 
+sprawiają że nasz kod jest bardziej czytelny.
