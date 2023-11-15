@@ -1,0 +1,6 @@
+Nazwa serwera   | Adres strony WWW producenta                               |Najnowsza wersja           |  Licencja komercyjna    
+MySQL           https://www.mysql.com/                                           8.2.0                     Tak
+PostgreSQL      https://www.postgresql.org/                                      16.1                      Nie
+MS SQL          https://www.microsoft.com/pl-pl/sql-server/sql-server-20190      Server 2022               Tak
+DB2             https://www.ibm.com/products/db2                                 Db2 13                    Tak
+Oracle          https://www.oracle.com/database/                                 Oracle Database 23c       Nie

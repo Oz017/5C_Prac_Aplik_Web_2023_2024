@@ -1,0 +1,12 @@
+Zalety korzystania z serwera baz danych
+1. Serwery baz danych umożliwiają łatwe skalowanie w zależności od wzrostu ilości danych i użytkowników.
+2. Dostęp do danych można kontrolować poprzez mechanizmy autoryzacji i uwierzytelniania, zabezpieczając przed nieautoryzowanym dostępem.
+3. Bazy danych oferują mechanizmy do utrzymania integralności danych, zapobiegając błędom i zagubieniu informacji.
+4. Struktury baz danych ułatwiają efektywne przechowywanie, wyszukiwanie i aktualizowanie danych
+
+Wady korzystania z serwera baz danych
+1.Implementacja i utrzymanie serwera baz danych wiążą się z kosztami związanymi z infrastrukturą i licencjami oprogramowania.
+2.Konfiguracja i zarządzanie serwerem baz danych może być skomplikowane, szczególnie w przypadku dużych projektów.
+3.Serwer baz danych może stanowić pojedynczy punkt awarii, co może prowadzić do przerw w dostępie do danych.
+4.Duże bazy danych mogą wymagać znacznych zasobów, zarówno pod względem pamięci, jak i mocy obliczeniowej
+5.Używając konkretnego systemu bazodanowego, można stać się uzależnionym od dostawcy i być ograniczonym przez jego funkcje i aktualizacje
