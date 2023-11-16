@@ -33,7 +33,7 @@
                 echo "</tr>";
 
             }
-        
+            mysqli_close($conn);
         ?>
     </table>
 </body>

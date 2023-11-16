@@ -19,13 +19,15 @@
             $pas = '';
             $db = 'imiona';
 
-            $imie;
+            $imie = $_POST['imie'];
+            $nazwisko = $_POST['nazwisko'];
+            $data = $_POST['data'];
 
             $conn = mysqli_connect($host,$user,$pas,$db);
             $query = 'SELECT * FROM dane';
-
+            $query2 = "INSERT INTO dane(imie, nazwisko, dataUrodzenia) VALUES ('$imie', '$nazwisko', '$data');";
+            $insert = mysqli_query($conn,$query2);
             $result = mysqli_query($conn,$query);
-
             while($row = mysqli_fetch_assoc($result)){
                 echo "<tr>";
                 echo "<td>". $row['ID'] . "</td>";
@@ -35,7 +37,7 @@
                 echo "</tr>";
 
             }
-        
+            mysqli_close($conn);
         ?>
     </table>
 </body>
