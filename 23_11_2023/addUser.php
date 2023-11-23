@@ -1,7 +1,10 @@
 <?php
 session_start();
-if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
+if($_SESSION['logged'] == false){
     header("Location: login.php");
+}
+if($_SESSION['isAdmin'] == false){
+    header("Location: podstrona1.php");
 }
 ?>
 <!DOCTYPE html>
@@ -10,6 +13,7 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodawanie użytkownika</title>
+    <link rel="stylesheet" href="styl.css">
 </head>
 <body>
     <main>
@@ -24,7 +28,7 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
         <a href="podstrona1.php">podstrona 1</a>
         <a href="delUser.php">Usuń użytkownika</a>
         <a href="zmien_haslo.php">Zmień hasło</a>
-        <button onclick="session_destroy()">Wyloguj</button>       
+        <a href = "logout.php" class="logout" class="logout"> Wyloguj </a>        
     </nav>
     <?php
         if(isset($_POST['login'])){
@@ -35,7 +39,7 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
             $pass = '';
             $db = 'login';
             $conn = mysqli_connect($host,$user,$pass,$db);
-            $query = "INSERT INTO users (userLogin, pass, isAdmin) VALUES ('$login', '$passw');";
+            $query = "INSERT INTO users (userLogin, pass, isAdmin) VALUES ('$login', '$passw', 0);";
             $result = mysqli_query($conn,$query);
             print "<p>Utworzono nowego użytkownika</p>";
         }

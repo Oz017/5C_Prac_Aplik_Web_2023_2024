@@ -9,6 +9,7 @@ if($_SESSION['logged'] == false){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
     <title>Zmiana hasła</title>
 </head>
 <body>
@@ -19,8 +20,7 @@ if($_SESSION['logged'] == false){
         </form>
     </main>
     <nav>
-        <a href="login.php">Powrót do strony głównej</a>
-        <a href="podstrona1.php">Podstrona 1</a>
+        <a href="podstrona1.php">Powrót do strony głównej</a>
     </nav>
     <?php
         if(isset($_POST['newPass'])){
@@ -29,8 +29,9 @@ if($_SESSION['logged'] == false){
             $user = 'root';
             $pass = '';
             $db = 'login';
+            $currentID = $_SESSION['UID'];
             $conn = mysqli_connect($host,$user,$pass,$db);
-            $query = "UPDATE SET pass = '$newPass' WHERE ID = '".$_SESSION['UID']."';";
+            $query = "UPDATE users SET pass = '$newPass' WHERE ID = '$currentID';";
             $result = mysqli_query($conn,$query);
             print "<p>Pomyślnie zmieniono hasło</p>";
         }

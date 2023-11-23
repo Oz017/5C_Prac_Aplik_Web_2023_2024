@@ -9,11 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl1.css">
+    <link rel="stylesheet" href="styl.css">
     <title>Zaloguj się</title>
 </head>
 <body>
-    <main>
+    <main id = "login-table">
         <h1>Login</h1>
         <form action="login.php" method="post">
             <label for="login">Login:<input type="text" name="login" id="login"></label><br>
@@ -30,40 +30,29 @@
             $login = $_POST['login'];
             $pass = $_POST['pass'];
             $conn = mysqli_connect($host,$user,$psw,$db);
-            $query = "SELECT * FROM users WHERE userLogin = '$login' AND pass = '$pass';";
+            $query = "SELECT * FROM users WHERE userLogin = '$login'";
             $result = mysqli_query($conn,$query);
             $row = mysqli_fetch_assoc($result);
-            if($row['userLogin'] != $login){
+            if( mysqli_num_rows($result) == 0){
                 $_SESSION['logged'] = false;
-                
+                echo "<p class = 'errorMsg'>Błędna nazwa użytkownika</p>";
 
             }else{
+            if($row['userLogin']==$login && $row['pass'] == $pass){
                 $_SESSION['logged'] = true;
                 $_SESSION['UID'] = $row['ID'];
-                print '<nav>';
-                print '<a href = "zmien_haslo.php">Zmiana hasła</a>';
-                print '<a href = "podstrona1.php">Podstrona 1</a>';
+                $_SESSION['login'] = $row['userLogin'];
                 if($row['isAdmin'] == 1){
-                    $_SESSION['Admin'] = true;
-                    print '<a href = "addUser.php">Dodaj użytkownika</a>';
-                    print '<a href = "delUser.php">Usuń użytkownika</a>';
+                    $_SESSION['isAdmin'] = true;
+                }else{
+                    $_SESSION['isAdmin'] = false;
                 }
-                print '<button>Wyloguj</button>';
-                print '</nav>';
+                header("Location: podstrona1.php");
+            }else{
+                print "<p class ='errorMsg'>Błędna nazwa użytkownika lub hasło</p>";
+            }
             }
             mysqli_close($conn);
-        }
-        if($_SESSION['logged'] == true){
-            print '<nav>';
-                print '<a href = "zmien_haslo.php">Zmiana hasła</a>';
-                print '<a href = "podstrona1.php">Podstrona 1</a>';
-                if($row['isAdmin'] == 1){
-                    $_SESSION['Admin'] = true;
-                    print '<a href = "addUser.php">Dodaj użytkownika</a>';
-                    print '<a href = "delUser.php">Usuń użytkownika</a>';
-                }
-                print '<button>Wyloguj</button>';
-                print '</nav>';
         }
     ?>
 </body>
