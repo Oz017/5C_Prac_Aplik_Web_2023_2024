@@ -40,6 +40,9 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
     <?php
         if(isset($_POST['id'])){
             $id = $_POST['id'];
+            $query = "DELETE FROM users WHERE ID = '$id'";
+            $result = mysqli_query($conn,$query);
+            echo "<p>Usunięto użytkownika</p>";
         }
     ?>
     </main>
