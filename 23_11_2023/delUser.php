@@ -25,7 +25,7 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
         echo "<table>";
         echo "<tr>";
         echo "<td>ID</td>";
-        echo "<td>userLogin</td>";
+        echo "<td>Login</td>";
         echo "</tr>";
         while($row = mysqli_fetch_assoc($result1)){
             echo "<tr>";
@@ -44,11 +44,9 @@ if($_SESSION['logged'] == false || $_SESSION['isAdmin'] == false){
             $id = $_POST['id'];
             $query = 'DELETE FROM `users` WHERE ID ='. $id;
             $result = mysqli_query($conn,$query);
-            if($result == true){
                 echo "<p>Usunięto użytkownika</p>";
-            }else{
-                echo "<p>Użytkownik o podanym ID nie istnieje</p>";
-            }
+                header('Refresh: 1');
+            
         }
     ?>
     </main>

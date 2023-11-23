@@ -24,8 +24,7 @@ if($_SESSION['isAdmin'] == false){
         </form>
     </main>
     <nav>
-        <a href="login.php">Powrót do strony głównej</a>
-        <a href="podstrona1.php">podstrona 1</a>
+        <a href="podstrona1.php">Strona główna</a>
         <a href="delUser.php">Usuń użytkownika</a>
         <a href="zmien_haslo.php">Zmień hasło</a>
         <a href = "logout.php" class="logout" class="logout"> Wyloguj </a>        
