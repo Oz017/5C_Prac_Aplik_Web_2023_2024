@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie egzaminacyjne 1</title>
+    <script>
+       function licznik(){
+            let counter = document.getElementById('tekst').value.length;
+            document.getElementById('counter').value = counter;
+
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <textarea name="" id="tekst" cols="30" rows="10" onkeydown="licznik()"></textarea>
+        <input type="text" name="counter" id="counter">
+    </form>
+</body>
+</html>
