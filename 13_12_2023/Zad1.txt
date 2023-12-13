@@ -1,0 +1,10 @@
+Zalety:
+-Informacja o błędzie w wypełnianiu formularza jest zwracana natychmiast, bez konieczności oczekiwania na odpowiedź ze strony serwera.
+-Zmniejszenie obciążenia serwera.
+
+
+Wady:
+-Brak zaufania do klienta
+-Zależność od przeglądarki
+-Zwiększone ryzyko błędów
+-Ograniczone bezpieczeństwo

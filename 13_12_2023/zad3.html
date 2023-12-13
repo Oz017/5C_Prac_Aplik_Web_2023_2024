@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+    <script>
+        function dni(){
+            let today = Date.now();
+            let dayOfBirth = document.getElementById('day').value;
+            let month = document.getElementById('month').value;
+            let yearOfBirth = document.getElementById('year').value;
+            let birth = yearOfBirth + "-" + month + "-" + dayOfBirth;
+            let birthDate = new Date(birth);
+            let różnica = today  - birthDate;
+            let days =  różnica/86400000;
+            days = parseInt(days);
+            document.getElementById('result').innerHTML = "Przeżyłeś " + days+ " dni";
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="day">dzień:<input type="text" name="day" id="day"></label><br>
+        <label for="month">miesiąc(1-12):<input type="text" name="month" id="month"></label><br>
+        <label for="year">rok urodzenia:<input type="text" name="wiekyear" id="year"></label>
+        <input type="button" value="Oblicz" onclick="dni()">
+    </form>
+    <p id="result"></p>
+</body>
+</html>

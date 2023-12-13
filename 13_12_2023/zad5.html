@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+    <script>
+        function zwroc(){
+            let nazwa = 'Zespół Szkół Elektrycznych';
+            let kod = '25-317';
+            let miejscowosc = 'Kielce';
+            let ulica = ' Prezydenta Ryszarda Kaczorowskiego 8';
+            let telefon = '41 368 05 70';
+
+            document.getElementById('nazwa').value = nazwa;
+            document.getElementById('kod').value = kod;
+            document.getElementById('miejscowosc').value = miejscowosc;
+            document.getElementById('ulica').value = nazwa;
+            document.getElementById('telefon').value = telefon;
+
+
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="nazwa">nazwa:<input type="text" name="nazwa" id="nazwa"></label><br>
+        <label for="kod">kod pocztowy:<input type="text" name="kod" id="kod"></label><br>
+        <label for="miejscowosc">miejscowość:<input type="text" name="miejscowosc" id="miejscowosc"></label><br>
+        <label for="ulica">ulica:<input type="text" name="ulica" id="ulica"></label><br>
+        <label for="numertelefonu">numer telefonu:<input type="text" name="telefon" id="telefon"></label><br>
+        <input type="button" value="Wyczyść" onclick="zwroc()">
+        <input type="button" value="Oblicz">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+    <script>
+        function zwroc(){
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            let wiek = document.getElementById("wiek").value;
+
+            document.getElementById('result').innerHTML = nazwisko + " " + imie + " " + wiek;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="nazwisko">Nazwisko:<input type="text" name="nazwisko" id="nazwisko"></label><br>
+        <label for="imie">Imie:<input type="text" name="imie" id="imie"></label><br>
+        <label for="wiek">Wiek:<input type="number" name="wiek" id="wiek"></label>
+        <input type="button" value="Wykonaj" onclick="zwroc()">
+    </form>
+    <p id="result"></p>
+</body>
+</html>

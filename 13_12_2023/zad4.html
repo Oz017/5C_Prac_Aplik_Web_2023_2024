@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+    <script>
+        function sprawdz(){
+            let imie = document.getElementById('imie').value;
+            let nazwisko = document.getElementById('nazwisko').value;
+            let email = document.getElementById('mail').value;
+            if(imie == ''){
+                document.getElementById('first').innerHTML = 'pole jest puste';
+            }else{
+                document.getElementById('first').innerHTML = '';
+            }
+            if(nazwisko == ''){
+                document.getElementById('second').innerHTML = 'pole jest puste';
+            }else{
+                document.getElementById('second').innerHTML = '';
+            }
+            if(email == ''){
+                document.getElementById('third').innerHTML = 'pole jest puste';
+            }else{
+                document.getElementById('third').innerHTML = '';
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="nazwisko">Nazwisko:<input type="text" name="nazwisko" id="nazwisko"></label><p id= "first" style="display: inline-block;"></p><br>
+        <label for="imie">Imie:<input type="text" name="imie" id="imie"></label><p id= "second" style="display: inline-block;"></p><br>
+        <label for="wiek">E-mail:<input type="text" name="mail" id="mail"><p id= "third" style="display: inline-block;"></p></label><br>
+        <input type="button" value="Wykonaj" onclick="sprawdz()">
+    </form>
+    
+    
+    
+
+</body>
+</html>

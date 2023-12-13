@@ -1,0 +1,10 @@
+zadanie 1
+    D = input
+zad2
+    D = action
+Zad3 
+    C
+Zad 4
+    C
+Zad 5
+    D
