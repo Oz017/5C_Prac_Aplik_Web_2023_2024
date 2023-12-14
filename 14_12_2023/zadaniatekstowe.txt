@@ -1,0 +1,25 @@
+zad.1
+
+    onLoad dokument Wystepuje po załadowaniu elementu
+    onSubmit formularz do uruchomienia skryptu w momencie zatwierdzenia formularza
+    onMouseClick wszystkie wykonanie skryptu po naciśnięciu kliknięcia elementu
+    onMouseOver wszystkie Wykonanie skryptu w momencie najechania na element kursorem myszki, np. zmiana koloru obiektu
+    onMouseOut wszystkie wykonanie skryptu w momencie opuszczenia przez kursor myszki obiektu, np. zmiana koloru obiektu
+
+Zad.2
+    onMouseOver: To zdarzenie występuje, gdy kursor myszy "wjeżdża" na element HTML.
+    onMouseDown: To zdarzenie występuje, gdy użytkownik naciska przycisk myszy (klikając).
+
+
+_________________________________________________________________
+Test Sprawdzający
+    zad1
+        B
+    zad2
+        D
+    zad3 
+        D 
+    zad4
+        A 
+    Zad5
+        D

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie Egzaminacyjne1</title>
+    <script>
+        function trojkat(){
+            let a = parseFloat(prompt('Podaj bok A:'));
+            let b = parseFloat(prompt('Podaj bok B:'));
+            let c = parseFloat(prompt('Podaj bok C:'));
+            if ((a+b>c) && (a+c>b) && (c+b>a)){
+                let obw = a+b+c
+                let p = (a+b+c)/2
+                let Pole = Math.sqrt(p*(p-a)*(p-b)*(p-c))
+                document.getElementById('wynik').innerHTML = `Obwód trójkąta wynosi ${obw}, a jego pole to ${Pole}`;
+            }else{
+                document.getElementById('wynik').innerHTML = `Nie można zbudować trójkąta`;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="trojkat()">Oblicz</button>
+    <p id="wynik"></p>
+</body>
+</html>
